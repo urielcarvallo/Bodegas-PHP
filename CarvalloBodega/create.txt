@@ -1,0 +1,9 @@
+CREATE TABLE grape_variety ( variety_id int(3) NOT NULL, variety varchar(50) DEFAULT '' NOT NULL, PRIMARY KEY (variety_id), KEY var (variety));
+CREATE TABLE inventory ( wine_id int(5) NOT NULL, inventory_id int(3) NOT NULL, on_hand int(5) NOT NULL, cost decimal(5,2) NOT NULL, date_added date, PRIMARY KEY (wine_id,inventory_id));
+CREATE TABLE items ( cust_id int(5) NOT NULL, order_id int(5) NOT NULL, item_id int(3) NOT NULL, wine_id int(4) NOT NULL, qty int(3), price decimal(5,2), PRIMARY KEY (cust_id,order_id,item_id)) ;
+CREATE TABLE orders ( cust_id int(5) NOT NULL, order_id int(5) NOT NULL, date timestamp,instructions varchar(128),creditcard char(16),expirydate char(5),PRIMARY KEY (cust_id,order_id));
+CREATE TABLE region (region_id int(4) NOT NULL,region_name varchar(100) NOT NULL,PRIMARY KEY (region_id),KEY region (region_name));
+CREATE TABLE wine_type(wine_type_id int(2) NOT NULL,wine_type varchar(32) NOT NULL,PRIMARY KEY (wine_type_id));
+CREATE TABLE wine_variety (wine_id int(5) DEFAULT '0' NOT NULL,variety_id int(3) DEFAULT '0' NOT NULL,id int(1) DEFAULT '0' NOT NULL,PRIMARY KEY (wine_id,variety_id),KEY wine (wine_id,variety_id)) ;
+CREATE TABLE titles (title_id int(2) NOT NULL,title char(10),PRIMARY KEY (title_id));
+CREATE TABLE countries (country_id int(4) NOT NULL,country char(30) NOT NULL,PRIMARY KEY (country_id),KEY (country));

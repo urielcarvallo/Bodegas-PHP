@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <head>
+        <title> Alta </title>
+    </head>
+    <body>
+        <div>
+            <img src="viniedoHD.jpg" style="width: 100%; height: 500px;"> </img>
+        </div>
+        <div align="CENTER">
+            <form action="altaVino.php", method="POST">
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="name"></td> 
+                    </tr>
+                    <tr>
+                        <td>Tipo:</td>
+                        <td><input type="text" name="wine_type"></td> 
+                    </tr>
+                    <tr>
+                        <td>Cosecha:</td>
+                        <td><input type="text" name="year"></td> 
+                    </tr>
+                    <tr>
+                        <td>Viñedo:</td>
+                        <td><input type="text" name="winery_id"></td> 
+                    </tr>
+                    <tr>
+                        <td> Descripcion:</td>
+                        <td><textarea type="text" name="description" style="height: 50px; width: 250px;"></textarea></td> 
+                    </tr>
+                    <tr>
+                        <td> <input type="submit"> </td>
+                    </tr>
+                </table>
+            </form>  
+            <form action='viniedos.html'>
+                <input type='submit' value='Volver'>
+            </form>
+        </div>
+    </body>
+</html>
